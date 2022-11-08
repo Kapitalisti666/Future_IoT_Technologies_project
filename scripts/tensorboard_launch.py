@@ -1,7 +1,7 @@
 from tensorboard import program
 import time
 
-tracking_address = "./ppo_logs" # the path of your log file.
+tracking_address = "./gym_linefollower/ppo_logs"
 
 if __name__ == "__main__":
     tb = program.TensorBoard()

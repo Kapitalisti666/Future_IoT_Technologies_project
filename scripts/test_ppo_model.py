@@ -4,9 +4,9 @@ from stable_baselines3 import PPO
 if __name__ == "__main__":
     episodes = 10
     env = LineFollowerEnv()
-    model = PPO('MlpPolicy', env, verbose = 1,tensorboard_log = "./test/")
+    model = PPO('MlpPolicy', env, verbose = 1)
     #model.load(path="C:/Users/teemu/Future_of_iot/line_follower_rl/ai_gym_train/gym_linefollower/ppo_models/ppo_model_25_10_2022_12_06_28.zip", env = env)
-    model.set_parameters("C:/Users/teemu/Future_of_iot/line_follower_rl/ai_gym_train/gym_linefollower/ppo_models/ppo_model_25_10_2022_12_28_06.zip")
+    model.set_parameters("./gym_linefollower/ppo_models/ppo_model_25_10_2022_12_28_06.zip")
     for episode in range(1, episodes+1):
         observation = env.reset()
         done = False

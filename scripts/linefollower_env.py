@@ -30,7 +30,8 @@ class LineFollowerEnv(gym.Env):
         self.line_mode  = line_mode
        
 
-        self.models_path = os.path.dirname(__file__)
+        self.models_path = os.path.dirname(__file__).replace("\\scripts", "")
+    
         if len(self.models_path) <= 0:
             self.models_path = "."
       

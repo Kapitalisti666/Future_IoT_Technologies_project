@@ -38,7 +38,7 @@ if __name__ == "__main__":
     dqn.compile(Adam(learning_rate=1e-3), metrics=['mae'])
     #dqn.load_weights("C:/Users/teemu/Future_of_iot/line_follower_rl/ai_gym_train/gym_linefollower/weights/weights_21_10_2022_13_00_01.h5")
     dqn.fit(env, nb_steps=50000, visualize=True, verbose=1)
-    dqn.save_weights(f"C:/Users/teemu/Future_of_iot/line_follower_rl/ai_gym_train/gym_linefollower/weights/weights_{current_time}.h5", overwrite=False)
+    dqn.save_weights(f"./gym_linefollower/nn_weights/weights_{current_time}.h5", overwrite=False)
     print("Training finished")
     time.sleep(10)
     breakpoint()
